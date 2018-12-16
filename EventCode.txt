@@ -64,10 +64,10 @@ if(global.playing == false)
 {
 	speed = 0;
 }
-// otherwise, control the ship because we’re playing
+// otherwise, control the ship because weâ€™re playing
 else
 {
-	// basic wrapping for sides of the screen…
+	// basic wrapping for sides of the screenâ€¦
 	if(x<0)
 	{
 		x=room_width;
@@ -76,7 +76,7 @@ else
 	{
 		x=0;
 	}
-	// …and the top and bottom
+	// â€¦and the top and bottom
 	if(y<0)
 	{
 		y=room_height;
@@ -89,7 +89,7 @@ else
 	// thrust if we press the space bar
 	if(keyboard_check(vk_space) == true)
 	{
-		// play the thrust sounds as a loop, but only if it isn’t already playing
+		// play the thrust sounds as a loop, but only if it isnâ€™t already playing
 		if(audio_is_playing(sndThrust) == false)
 		{
 			audio_play_sound(sndThrust,1,true);
@@ -122,7 +122,7 @@ else
 		image_angle = image_angle - turnRate;
 	}
 
-	// drag (yes, even though we're in space – because it makes the game work better)
+	// drag (yes, even though we're in space â€“ because it makes the game work better)
 	if(speed>0.02)
 	{
 		speed = speed - .02;
@@ -136,6 +136,9 @@ else
 objGameController
 Create event:
 /// @description initialize variables and alarms
+// randomize the random numbers
+randomize();
+
 playerScore = 0;
 
 // set the life value when we start to give oxygen tanks
